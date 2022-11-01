@@ -1,0 +1,5 @@
+https://github.com/coreybutler/nvm-windows
+vuejs.org/guide/quick-start#creating-a-vue-application
+https://tailwindcss.com/docs/installation
+https://linuxhint.com/create-components-vue-cli/
+https://vuejs.org/guide/essentials/list.html#v-for-with-a-range
