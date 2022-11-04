@@ -1,8 +1,8 @@
 <template>
-    <div class="w-16 h-16 border" :class="getSquareColorClass">
-        <Piece v-if="this.piece !== ''" :name="piece" />
-        {{ this.piece }}
-    </div>
+  <div class="w-16 h-16 border" :class="getSquareColorClass">
+    <Piece v-if="this.piece !== ''" :name="piece" />
+    {{ this.piece }}
+  </div>
 </template>
 
 <script>
