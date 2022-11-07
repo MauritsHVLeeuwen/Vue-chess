@@ -1,7 +1,6 @@
 <template>
-  <div class="w-16 h-16 border" :class="getSquareColorClass">
+  <div class="w-16 h-16 border" :class="getSquareColorClass" :ondrop="drop" :ondragover="allowDrop">
     <Piece v-if="this.piece !== ''" :name="piece" />
-    {{ this.piece }}
   </div>
 </template>
 
@@ -31,6 +30,17 @@ export default {
         if (this.x == 4 && this.y == 1) {
             this.piece = 'black_queen';
         }
+    },
+    methods: {
+        allowDrop(event) {
+            event.preventDefault();
+        },
+        drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text");
+            event.target.appendChild(document.getElementById(data));
+        }
     }
 }
+
 </script>
