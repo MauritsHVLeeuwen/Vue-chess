@@ -17,8 +17,7 @@ export default {
   components: { Square },
   methods:{
     onClick() {
-      this.$store.commit('increment')
-    //   alert("Hello!")
+      this.$store.commit('incrementCount')
     }
   }
 }

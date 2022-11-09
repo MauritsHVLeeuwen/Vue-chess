@@ -30,6 +30,10 @@ export default {
         if (this.x == 4 && this.y == 1) {
             this.piece = 'black_queen';
         }
+
+        this.unwatch = this.$store.watch((state, getters) => getters.piece, (newValue, oldValue) => {
+            console.log(`Updating from ${oldValue} to ${newValue}`);
+        })   
     },
     methods: {
         allowDrop(event) {
@@ -39,6 +43,7 @@ export default {
             event.preventDefault();
             var data = event.dataTransfer.getData("text");
             event.target.appendChild(document.getElementById(data));
+            this.$store.commit('setPiece', "")
         }
     }
 }

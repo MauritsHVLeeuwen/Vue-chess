@@ -1,13 +1,15 @@
 <script>
 export default {
-    props: {
-        name: String,
-    },
-    methods: {
-        drag(event) {
-            event.dataTransfer.setData("text", event.target.id);
-        }
+  props: {
+    name: String,
+  },
+  methods: {
+    drag(event) {
+      event.dataTransfer.setData("text", event.target.id);
+      this.$store.commit('setPiece', this.name)
+      console.log(this.$store.state.piece)
     }
+  }
 }
 </script>
 

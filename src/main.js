@@ -10,12 +10,16 @@ import './assets/main.css'
 const store = createStore({
   state () {
     return {
-      count: 0
+      count: 0,
+      piece: ""
     }
   },
   mutations: {
-    increment (state) {
+    incrementCount (state) {
       state.count++
+    },
+    setPiece (state, piece) {
+      state.piece = piece
     }
   }
 })
